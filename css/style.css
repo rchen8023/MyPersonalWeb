@@ -1,0 +1,138 @@
+:root{
+    --myred: #bc2929;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: white;
+    color: #555;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    font-size: 20px;
+    font-family: 'PT Serif';
+    letter-spacing: 1px;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+
+header {
+    background-image: url(image/Header-back.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.name-box {
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    left: 25%;
+    text-align: center;
+}
+
+.name-box p {
+    margin-bottom: 50px;
+    color: #bebebe;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    font-size: 120%
+}
+
+/* Main Nav*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--myred);
+}
+
+/*LOGO*/
+
+.logo {
+    height: 100px;
+    width: 100px;
+    float: left;
+    border-radius: 50%;
+    margin-top: 25px;
+}
+
+/*HEADING*/
+
+h1, h2 {
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: var(--myred);
+    font-size: 300%;
+    word-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+h1:after {
+    display: block;
+    height: 2px;
+    background-color: #670b0b;
+    content: " ";
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+/*Buttons*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: var(--myred);
+    border-radius: 200px;
+    transition: bacground-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: var(--myred);
+}
+
+.about-btn:link,
+.about-btn:visited {
+    border: 2px solid var(--myred);
+    font-size: 120%
+}
+
+.about-btn:hover,
+.about-btn:active {
+    color: white;
+}
+
+/*Paragraph*/
