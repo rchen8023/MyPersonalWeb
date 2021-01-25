@@ -1,9 +1,11 @@
 :root{
     --myred: #bc2929;
+    --lightred: #ef1a1a;
 }
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -16,6 +18,17 @@ body {
     font-size: 20px;
     font-family: 'PT Serif';
     letter-spacing: 1px;
+    scroll-behavior: smooth;
+}
+
+/*clear the float*/
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
 
 .row {
@@ -23,10 +36,14 @@ body {
     margin: 0 auto;
 }
 
+section {
+    padding: 80px 0
+}
+
 /*HEADER*/
 
 header {
-    background-image: url(image/Header-back.jpg);
+    background-image: url(/image/headerback.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -36,8 +53,9 @@ header {
 .name-box {
     position: absolute;
     width: 50%;
-    top: 30%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-align: center;
 }
 
@@ -65,9 +83,18 @@ header {
     margin-left: 40px;
 }
 
-.main-nav li a {
+.main-nav li a:link,
+.main-nav li a:visited {
     text-decoration: none;
     color: var(--myred);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: var(--lightred);
+    border-bottom: 2px solid var(--lightred);
 }
 
 /*LOGO*/
@@ -82,9 +109,10 @@ header {
 
 /*HEADING*/
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Poppins';
     letter-spacing: 1px;
+    text-align: center;
 }
 
 h1 {
@@ -92,9 +120,17 @@ h1 {
     font-size: 300%;
     word-spacing: 4px;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
-h1:after {
+h2 {
+    color: var(--myred);
+    font-size: 130%;
+    font-weight: 600;
+}
+
+h1:after,
+h2:after {
     display: block;
     height: 2px;
     background-color: #670b0b;
@@ -104,7 +140,17 @@ h1:after {
     margin-top: 10px;
 }
 
+h2:after {
+    width: 100px;
+    margin-top: 5px;
+}
 
+h3 {
+    color: var(--myred);
+    font-size: 150%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 /*Buttons*/
 
 .btn:link,
@@ -114,9 +160,26 @@ h1:after {
     font-weight: 400;
     font-family: 'Poppins';
     text-decoration: none;
-    color: var(--myred);
     border-radius: 200px;
+    margin: 0 25px;
+    -webkit-transition: bacground-color 0.5s, border 0.5s, color 0.5s;
     transition: bacground-color 0.5s, border 0.5s, color 0.5s;
+}
+
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 2px solid var(--myred);
+    font-size: 120%;
+    color: var(--myred);
+}
+
+.btn-fill:link,
+.btn-fill:visited {
+    background-color: var(--lightred);
+    font-size: 120%;
+    color: whitesmoke;
+    border: 2px solid var(--lightred);
 }
 
 .btn:hover,
@@ -124,15 +187,143 @@ h1:after {
     background-color: var(--myred);
 }
 
-.about-btn:link,
-.about-btn:visited {
-    border: 2px solid var(--myred);
-    font-size: 120%
-}
-
-.about-btn:hover,
-.about-btn:active {
+.btn-ghost:hover,
+.btn-ghost:active {
     color: white;
 }
 
-/*Paragraph*/
+.btn-fill:hover,
+.btn-fill:active {
+    border: 2px solid var(--myred);
+}
+
+.about-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*About Page*/
+.about-page {
+    background-color: #f4f4f4;
+}
+
+.hello, .seeking-job {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+.hello {
+    text-align: center;
+    line-height: 350%;
+    font-size: 200%;
+    font-family: 'Poppins';
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: black;
+}
+
+.seeking-job {
+    font-style: italic;
+    word-spacing: 2.5px;
+    letter-spacing:1px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.seeking-job a:link,
+.seeking-job a:visited {
+    text-decoration: none;
+    color: var(--lightred);
+    font-weight: 700;
+    transition: color 0.s;
+}
+
+.seeking-job a:hover,
+.seeking-job a:active {
+    color: var(--myred);
+}
+
+.about-me, .skills {
+    padding: 3%;
+}
+
+.skills {
+    margin-top: 5%
+}
+
+.about-me a:link,
+.about-me a:visited {
+    text-decoration: none;
+    color: var(--lightred);
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s color 0.5s;
+}
+
+.about-me a:hover,
+.about-me a:active {
+    color: var(--myred);
+    border-bottom: 2px solid var(--myred);
+}
+
+.bio {
+    line-height: 160%;
+    word-spacing: 2px;
+    margin: 0;
+    color: black;
+    font-size: 90%;
+    margin: 0 10px;
+    letter-spacing: 1.5px;
+}
+
+.photo {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--myred);
+    margin-bottom: 30px;
+    margin-left: 25%;
+}
+
+.bar {
+    background-color: #e2e2e2;
+    position: relative;
+    display: block;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    height: 30px;
+    width: 90%;
+    margin: 5% 0 5% 5%;
+}
+
+.bar.fill {
+    left: 0;
+    top: 0;
+    background-color: var(--myred);
+    position: absolute;
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.tag {
+    position: absolute;
+    background-color: var(--lightred);
+    font-family: "Poppins";
+    color: whitesmoke;
+    width: 110px;
+    font-size: 90%;
+    height: 100%;
+    text-align: center;
+}
+
+span {
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    font-size: 90%
+}
+
+
