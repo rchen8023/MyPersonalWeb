@@ -37,7 +37,8 @@ body {
 }
 
 section {
-    padding: 80px 0
+    padding: 80px 0;
+    
 }
 
 /*HEADER*/
@@ -109,14 +110,14 @@ header {
 
 /*HEADING*/
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
+    color: var(--myred);
     font-family: 'Poppins';
     letter-spacing: 1px;
     text-align: center;
 }
 
 h1 {
-    color: var(--myred);
     font-size: 300%;
     word-spacing: 4px;
     margin-bottom: 30px;
@@ -124,7 +125,6 @@ h1 {
 }
 
 h2 {
-    color: var(--myred);
     font-size: 130%;
     font-weight: 600;
 }
@@ -145,12 +145,23 @@ h2:after {
     margin-top: 5px;
 }
 
-h3 {
-    color: var(--myred);
+.skill-header {
     font-size: 150%;
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+.work-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 100%;
+    text-align: left;
+    color: black;
+}
+
 /*Buttons*/
 
 .btn:link,
@@ -326,4 +337,74 @@ span {
     font-size: 90%
 }
 
+/*Resume*/
 
+.experience-row {
+    display: inline-block;
+    margin: 0;
+}
+.experience-row img{
+    width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.experience-row a:link,
+.experience-row a:visited {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 110%;
+    color: var(--lightred);
+    transition: color 0.5s;
+}
+
+.experience-row a:hover,
+.experience-row a:active {
+    color: var(--myred);
+}
+
+.span-3-of-5 {
+    border-left: 2px solid #555;
+    margin: 0; 
+}
+
+.work-duty {
+    margin: 25px 40px 30px 25px;
+}
+
+.work-duty a:link,
+.work-duty a:visited {
+    font-family: 'PT Serif';
+    font-size: 100%;
+    
+}
+
+.work-date {
+    font-family: 'PT Serif';
+    font-weight: 400;
+    font-size: 80%;
+    font-style: italic;
+}
+
+.skill {
+    display: inline-block;
+    border: 2px solid #fa6c6c;
+    border-radius: 8px;
+    font-size: 70%;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 5px;
+    margin: 10px 15px;
+    float: left;
+}
+
+.software-skill {
+    border-color: skyblue;
+}
+
+.other-skill {
+    border-color: #59d6ac
+}
