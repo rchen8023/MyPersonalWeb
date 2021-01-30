@@ -1,0 +1,152 @@
+@media only screen and (max-height: 565px) {
+    header { 
+        height: 560px;
+        position: relative; 
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .name-box {
+        width: 100%;
+        padding: 0 5%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px;}
+    h4 { font-size: 95%}
+    section { 
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    .logo { height: 75px; }
+    .sticky .logo { height: 55px;}
+
+    
+    .intro-text {
+        font-size: 160%;
+    }
+    
+    .tag {
+        font-size: 80%;
+        width: 95px;
+    }
+    
+    .bar { margin: 8% 0 8% 5%; }
+    
+    .tag p { padding-top: 4px;}
+    span {
+        margin-top: 2%;
+        font-size: 70%;
+    }
+    .experience-row img{
+        width: 13%;
+        margin-right: 10px;
+    }
+    .experience-row a:link,
+    .experience-row a:visited {
+        font-size: 100%;
+    }
+    .work-date { font-size: 70%}
+    
+}
+
+@media only screen and (max-width: 767px) {
+    body { font-size:  16px; }
+    section { padding: 20% 0; }
+    
+    .row, .name-box { padding: 0 4%;}
+    
+    .col {
+        width: 100%; 
+        margin: 0 0 4% 0;
+    }
+    
+    
+    .mobile-nav-icon { display: inline-block; }
+    .main-nav {
+        position: absolute;
+        margin: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 20%; 
+        padding-bottom: 20%;
+        font-size: 150%;
+        background-color: #172231;
+        display: none;
+        z-index: 9;
+    }
+
+    .main-nav li { 
+        display: block;
+        line-height: 200%;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    .sticky .logo { 
+        margin-top: 12px;
+        position: initial;
+    }
+    
+    .sticky .main-nav { 
+        position: initial;
+    }
+    
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    .sticky .mobile-nav-icon { 
+        margin-top: 15px;
+    }
+    
+    .photo { margin-top: 50px; }
+    .bar { margin: 5% 0 5% 5%; }
+    
+    .experience-row a:link,
+    .experience-row a:visited {
+        font-size: 125%;
+    }
+    
+    .work-date { font-size: 80%}
+    
+    .span-3-of-5 {
+        border-top: 2px solid #b9b7b7;
+        border-left: 0;
+    }
+    
+    .contact-me { line-height: 160%;}
+    
+    .contact-site { margin-top: 10%;}
+    
+}
+
+@media only screen and (max-width: 480px) {
+    section { padding: 20% 0; }
+    
+    .logo {
+        width: 65px; 
+        height: auto;
+        margin-top: 20px;
+    }
+    .sticky .logo { 
+        width: 50px;
+        height: auto;
+        margin-bottom: 8px;
+        margin-top: 10px;
+    }
+    
+    .work-duty p { margin-top: 30px;}
+    
+    
+}

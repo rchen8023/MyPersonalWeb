@@ -37,7 +37,7 @@ body {
 }
 
 section {
-    padding: 80px 0;
+    padding: 100px 0;
     
 }
 
@@ -49,11 +49,12 @@ header {
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
+    border-bottom: 3px solid var(--myred);
 }
 
 .name-box {
     position: absolute;
-    width: 50%;
+    width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -98,14 +99,54 @@ header {
     border-bottom: 2px solid var(--lightred);
 }
 
+/*Sticky Nav*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #172231;
+    box-shadow: 0 3px 2px var(--myred);
+    z-index: 9999;
+}
+
+.sticky .main-nav { 
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.sticky .logo { 
+    height: 65px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*Mobile Nav*/
+
+.mobile-nav-icon {
+    position: absolute;
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 999;
+    right: 5%;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: var(--myred);
+}
+
 /*LOGO*/
 
 .logo {
     height: 90px;
-    width: 90px;
+    width: auto;
     float: left;
     border-radius: 50%;
     margin-top: 25px;
+    position: absolute;
+    z-index: 999;
+
 }
 
 /*HEADING*/
@@ -173,7 +214,7 @@ h4 {
     font-family: 'Poppins';
     text-decoration: none;
     border-radius: 200px;
-    margin: 0 25px;
+    margin: 10px 25px;
     -webkit-transition: bacground-color 0.5s, border 0.5s, color 0.5s;
     transition: bacground-color 0.5s, border 0.5s, color 0.5s;
 }
@@ -227,10 +268,11 @@ h4 {
 
 .intro-text {
     text-align: center;
-    line-height: 350%;
+    line-height: 150%;
     font-size: 200%;
     font-family: 'Poppins';
-    margin-bottom: 10px;
+    margin: 20px;
+    padding: 15px 10px 30px;
     font-weight: 600;
     color: black;
 }
@@ -328,6 +370,10 @@ h4 {
     width: 110px;
     font-size: 90%;
     height: 100%;
+}
+
+.tag p{
+    padding-top: 2px;
     text-align: center;
 }
 
@@ -335,7 +381,7 @@ span {
     float: right;
     margin-right: 1%;
     margin-top: 1%;
-    font-size: 90%
+    font-size: 90%;
 }
 
 /*Resume*/
@@ -369,7 +415,7 @@ span {
 
 .work-place {
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 20px;
 }
 
 .span-3-of-5 {
@@ -387,8 +433,7 @@ span {
 .work-duty a:link,
 .work-duty a:visited {
     font-family: 'PT Serif';
-    font-size: 100%;
-    
+    font-size: 95%;
 }
 
 .work-duty p {
@@ -512,7 +557,8 @@ footer {
 .go-top a:visited {
     position: absolute;
     top: -24px;
-    left: 50%;
+    left: 45%;
+    transition: color 1s;
 }
 
 .go-top a:hover,
@@ -524,3 +570,20 @@ footer {
 .up-icon:active {
     color: #e86065;
 }
+
+.bar-js,
+.photo-js,
+.duty-1-js,
+.duty-2-js,
+.contact-js {
+    opacity: 0; /*not visible the varible*/
+    animation-duration: 1.5s;
+}
+
+.bar-js.animated,
+.photo-js.animated,
+.duty-1-js.animated,
+.duty-2-js.animated,
+.contact-js.animated { /*a class have js--wp-1 and animated class at the same time*/
+    opacity: 1;
+} 
