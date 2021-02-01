@@ -90,7 +90,7 @@ header {
     text-decoration: none;
     color: var(--myred);
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s;
+    transition: all 0.5s;
 }
 
 .main-nav li a:hover,
@@ -98,6 +98,7 @@ header {
     color: var(--lightred);
     border-bottom: 2px solid var(--lightred);
 }
+
 
 /*Sticky Nav*/
 .sticky {
@@ -151,7 +152,7 @@ header {
 
 /*HEADING*/
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     color: var(--myred);
     font-family: 'Poppins';
     letter-spacing: 1px;
@@ -198,11 +199,16 @@ h2:after {
     font-size: 160%
 }
 
-h4 {
+h4, h5 {
     font-size: 100%;
     text-align: left;
     color: black;
 }
+
+h5 {
+    color: white;
+}
+
 
 /*Buttons*/
 
@@ -215,8 +221,7 @@ h4 {
     text-decoration: none;
     border-radius: 200px;
     margin: 10px 25px;
-    -webkit-transition: bacground-color 0.5s, border 0.5s, color 0.5s;
-    transition: bacground-color 0.5s, border 0.5s, color 0.5s;
+    transition: all 0.5s;
 }
 
 
@@ -247,6 +252,20 @@ h4 {
 
 .btn-fill:hover,
 .btn-fill:active {
+    border: 2px solid var(--myred);
+}
+
+
+.main-nav li a.btn.btn-fill {
+    font-size: 100%;
+    color: white;
+    margin: 0;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+.main-nav li a.btn.btn-fill:hover,
+.main-nav li a.btn.btn-fill:active {
     border: 2px solid var(--myred);
 }
 
@@ -290,7 +309,7 @@ h4 {
     text-decoration: none;
     color: var(--lightred);
     font-weight: 700;
-    transition: color 0.s;
+    transition: all 0.5s;
 }
 
 .seeking-job a:hover,
@@ -312,7 +331,7 @@ h4 {
     color: var(--lightred);
     font-weight: 700;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s color 0.5s;
+    transition: all 0.5s;
 }
 
 .about-me a:hover,
@@ -405,7 +424,7 @@ span {
     font-weight: 700;
     font-size: 110%;
     color: var(--lightred);
-    transition: color 0.5s;
+    transition: all 0.5s;
 }
 
 .experience-row a:hover,
@@ -482,6 +501,60 @@ span {
     background-color: #fff5f5;
 }
 
+.item {
+    overflow: hidden;
+    height: 270px;
+    position: relative;
+}
+
+.myproject {
+    text-decoration: none;
+    display: block;
+}
+
+.myproject img {
+    width: 100% ;
+    height: 100%;
+    position: absolute;
+}
+
+.myproject .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(88, 9, 9, 0.83);
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 15px 20px;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.myproject .overlay:hover {
+    opacity: 1;
+}
+
+.project-name p{
+    font-size: 90%;
+    color: #b1b1b1;
+    padding-top: 10px;
+}
+
+.more-icon {
+    width: 15%;
+    height: 20%;
+    text-align: center;
+    font-size: 15px;
+    top: 60%;
+    left: 42.5%; 
+    position: absolute;
+}
+
+.more-project {
+    text-align: center;
+    margin-top: 5%;
+}
 /*Contact*/
 
 .contact-page {
@@ -516,7 +589,7 @@ ion-icon {
     font-family: "Poppins";
     font-weight: 500;
     color: #3b9bef;
-    transition: color 0.5s;
+    transition: all 0.5s;
 }
 
 .email a:hover,
@@ -558,7 +631,7 @@ footer {
     position: absolute;
     top: -24px;
     left: 45%;
-    transition: color 1s;
+    transition: all 1s;
 }
 
 .go-top a:hover,
@@ -587,3 +660,65 @@ footer {
 .contact-js.animated { /*a class have js--wp-1 and animated class at the same time*/
     opacity: 1;
 } 
+
+/*Popup Window*/ 
+
+.popup-window {
+    position: relative;
+    background: #FFF;
+    max-width: 700px;
+    margin: 120px auto; 
+}
+
+.popup-window img {
+    width: 100%;
+    min-height: 300px;
+}
+
+.links {
+    background-color: black;
+    padding: 20px;
+}
+
+.links a:link,
+.links a:visited {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: var(--myred);
+    margin: 10px 20px;
+    transition: all 0.5s;
+}
+
+.links a:hover,
+.links a:active {
+    color: var(--lightred);
+}
+
+.popup-modal-dismiss {
+    cursor: pointer;
+}
+
+.project-description {
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.project-description h5 {
+    color: black;
+    word-spacing: 2px;
+    font-size: 90%
+}
+
+.project-description p {
+    margin: 15px 0;
+    font-size: 80%;
+    line-height: 150%;
+    word-spacing: 1.5px;
+    letter-spacing: 1px;
+}
+
+.project-description span {
+    margin: 10px 15px 10px 0;
+}
+

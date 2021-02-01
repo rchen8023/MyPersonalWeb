@@ -22,9 +22,15 @@
         padding-right: 2%;
     }
     
+    .main-nav li {margin: 0 10px;}
+    
     .logo { height: 75px; }
     .sticky .logo { height: 55px;}
 
+    .popup-window { 
+        margin: 105px auto; 
+        max-width: 600px;
+    }
     
     .intro-text {
         font-size: 160%;
@@ -110,6 +116,10 @@
         margin-top: 15px;
     }
     
+    .popup-window { 
+        margin: 95px auto; 
+    }
+    
     .photo { margin-top: 50px; }
     .bar { margin: 5% 0 5% 5%; }
     
@@ -148,5 +158,8 @@
     
     .work-duty p { margin-top: 30px;}
     
+    .popup-window { 
+        margin: 80px auto; 
+    }
     
 }
