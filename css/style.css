@@ -57,6 +57,7 @@ header {
     width: 80%;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     text-align: center;
 }
@@ -90,6 +91,7 @@ header {
     text-decoration: none;
     color: var(--myred);
     border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -107,6 +109,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #172231;
+    -webkit-box-shadow: 0 3px 2px var(--myred);
     box-shadow: 0 3px 2px var(--myred);
     z-index: 9999;
 }
@@ -221,6 +224,7 @@ h5 {
     text-decoration: none;
     border-radius: 200px;
     margin: 10px 25px;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -309,6 +313,7 @@ h5 {
     text-decoration: none;
     color: var(--lightred);
     font-weight: 700;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -331,6 +336,7 @@ h5 {
     color: var(--lightred);
     font-weight: 700;
     border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -424,6 +430,7 @@ span {
     font-weight: 700;
     font-size: 110%;
     color: var(--lightred);
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -528,6 +535,7 @@ span {
     width: 100%;
     padding: 15px 20px;
     opacity: 0;
+    -webkit-transition: all 0.7s;
     transition: all 0.7s;
 }
 
@@ -589,6 +597,7 @@ ion-icon {
     font-family: "Poppins";
     font-weight: 500;
     color: #3b9bef;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -631,6 +640,7 @@ footer {
     position: absolute;
     top: -24px;
     left: 45%;
+    -webkit-transition: all 1s;
     transition: all 1s;
 }
 
@@ -650,6 +660,7 @@ footer {
 .duty-2-js,
 .contact-js {
     opacity: 0; /*not visible the varible*/
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
 
@@ -687,6 +698,7 @@ footer {
     font-weight: 600;
     color: var(--myred);
     margin: 10px 20px;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
